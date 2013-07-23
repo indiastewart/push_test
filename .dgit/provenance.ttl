@@ -18,6 +18,19 @@
         <http://example.com/object/blob/798f988a6a32c5766acf0c31c6af18420acbe9c0>,
         <http://example.com/object/blob/7c96c3c467fb625f4ef4367c3f4374b02ff56440> .
 
+<file://home/india/git_experiment/scratchpad/testing/merge_tests/push> git:hadLogMember <http://example.com/object/commit/04b6562f5e50b8dc4e7fce58a9e1fd5d514837a0>,
+        <http://example.com/object/commit/1a4e2d4a0e0eb93b3493196f56d8cb7734091b4e>,
+        <http://example.com/object/commit/6c7ed319d6e3c976e78be83c70bd2cf13f844edc>,
+        <http://example.com/object/commit/82553934a61c9af212f80c6b8a1e2a74dc4b4927>,
+        <http://example.com/object/commit/c4429fa4aa0670bb81b5c8c51d96cae52dd69e15>,
+        <http://example.com/object/commit/d8ea8882e44eede92622d4f9db707aa0077bffcc>,
+        <http://example.com/object/commit/ea08153947f054c6f3049ab6e5f83ccc61e65a0a> ;
+    prov:hadMember <http://example.com/object/blob/0c3b77f4de086f8b89b67bc88bfdde319fb4c6b8>,
+        <http://example.com/object/blob/3b4eb30e32fb8138839252f321e0031111e53adf>,
+        <http://example.com/object/blob/3ef3468026c5aba27df4dd44565cfe9d6b2f0a0b>,
+        <http://example.com/object/blob/7c96c3c467fb625f4ef4367c3f4374b02ff56440>,
+        <http://example.com/object/blob/a8ce97d67c82eaacfc839653b591d4cd4135d01c> .
+
 <file://home/india/git_experiment/scratchpad/testing/merge_tests/push_test> a git:repository,
         prov:Collection ;
     git:hadLogMember <http://example.com/object/commit/6c7ed319d6e3c976e78be83c70bd2cf13f844edc>,
@@ -49,6 +62,12 @@
     prov:atLocation "/home/india/git_experiment/scratchpad/testing/merge_tests/push_test/.dgit/provenance.ttl" ;
     foaf:name "provenance.ttl" .
 
+<http://example.com/object/blob/0c3b77f4de086f8b89b67bc88bfdde319fb4c6b8> a git:blob,
+        prov:Entity ;
+    git:asOf <http://example.com/object/commit/1a4e2d4a0e0eb93b3493196f56d8cb7734091b4e> ;
+    prov:atLocation "/home/india/git_experiment/scratchpad/testing/merge_tests/push/action" ;
+    foaf:name "action" .
+
 <http://example.com/object/blob/2a3bce528ad70625b4164b228640a5f72e0bce90> a git:blob,
         prov:Entity ;
     git:asOf <http://example.com/object/commit/6c7ed319d6e3c976e78be83c70bd2cf13f844edc> ;
@@ -76,31 +95,43 @@
     prov:atLocation "/home/india/git_experiment/scratchpad/testing/merge_tests/pull1/action" ;
     foaf:name "action" .
 
+<http://example.com/object/blob/a8ce97d67c82eaacfc839653b591d4cd4135d01c> a git:blob,
+        prov:Entity ;
+    git:asOf <http://example.com/object/commit/1a4e2d4a0e0eb93b3493196f56d8cb7734091b4e> ;
+    prov:atLocation "/home/india/git_experiment/scratchpad/testing/merge_tests/push/.dgit/provenance.ttl" ;
+    foaf:name "provenance.ttl" .
+
 <http://example.com/object/blob/7c96c3c467fb625f4ef4367c3f4374b02ff56440> a git:blob,
         prov:Entity ;
     git:asOf <http://example.com/object/commit/04b6562f5e50b8dc4e7fce58a9e1fd5d514837a0>,
+        <http://example.com/object/commit/1a4e2d4a0e0eb93b3493196f56d8cb7734091b4e>,
         <http://example.com/object/commit/c4429fa4aa0670bb81b5c8c51d96cae52dd69e15> ;
-    prov:atLocation "/home/india/git_experiment/scratchpad/testing/merge_tests/pull1/action3" ;
+    prov:atLocation "/home/india/git_experiment/scratchpad/testing/merge_tests/pull1/action3",
+        "/home/india/git_experiment/scratchpad/testing/merge_tests/push/action3" ;
     foaf:name "action3" .
 
 <http://example.com/object/blob/3b4eb30e32fb8138839252f321e0031111e53adf> a git:blob,
         prov:Entity ;
     git:asOf <http://example.com/object/commit/04b6562f5e50b8dc4e7fce58a9e1fd5d514837a0>,
+        <http://example.com/object/commit/1a4e2d4a0e0eb93b3493196f56d8cb7734091b4e>,
         <http://example.com/object/commit/6c7ed319d6e3c976e78be83c70bd2cf13f844edc>,
         <http://example.com/object/commit/82553934a61c9af212f80c6b8a1e2a74dc4b4927>,
         <http://example.com/object/commit/c4429fa4aa0670bb81b5c8c51d96cae52dd69e15>,
         <http://example.com/object/commit/d8ea8882e44eede92622d4f9db707aa0077bffcc>,
         <http://example.com/object/commit/ea08153947f054c6f3049ab6e5f83ccc61e65a0a> ;
     prov:atLocation "/home/india/git_experiment/scratchpad/testing/merge_tests/pull1/README.md",
+        "/home/india/git_experiment/scratchpad/testing/merge_tests/push/README.md",
         "/home/india/git_experiment/scratchpad/testing/merge_tests/push_test/README.md" ;
     foaf:name "README.md" .
 
 <http://example.com/object/blob/3ef3468026c5aba27df4dd44565cfe9d6b2f0a0b> a git:blob,
         prov:Entity ;
     git:asOf <http://example.com/object/commit/04b6562f5e50b8dc4e7fce58a9e1fd5d514837a0>,
+        <http://example.com/object/commit/1a4e2d4a0e0eb93b3493196f56d8cb7734091b4e>,
         <http://example.com/object/commit/6c7ed319d6e3c976e78be83c70bd2cf13f844edc>,
         <http://example.com/object/commit/c4429fa4aa0670bb81b5c8c51d96cae52dd69e15> ;
     prov:atLocation "/home/india/git_experiment/scratchpad/testing/merge_tests/pull1/action2",
+        "/home/india/git_experiment/scratchpad/testing/merge_tests/push/action2",
         "/home/india/git_experiment/scratchpad/testing/merge_tests/push_test/action2" ;
     foaf:name "action2" .
 
@@ -116,6 +147,13 @@
     rdfs:comment "Initial commit" ;
     prov:GeneratedAtTime "2013-07-22T18:52:45-0700" ;
     prov:wasAttributedTo "indiastewart" .
+
+<http://example.com/object/commit/1a4e2d4a0e0eb93b3493196f56d8cb7734091b4e> a git:commit,
+        prov:Entity ;
+    rdfs:comment "edited action" ;
+    prov:GeneratedAtTime "2013-07-22T22:43:08-0400" ;
+    prov:wasAttributedTo "India Stewart" ;
+    prov:wasDerivedFrom <http://example.com/object/commit/682807f28fd80cf261558b5fbbbc73f843c6549c> .
 
 <http://example.com/object/commit/ea08153947f054c6f3049ab6e5f83ccc61e65a0a> a git:commit,
         prov:Entity ;
